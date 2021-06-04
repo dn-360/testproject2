@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator} from 'react-navigation-stack';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+import FirstPage from './FirstPage';
+import SecondPage from './SecondPage';
+import ThirdPage from './ThirdPage';
+import FourthPage from './FourthPage';
+import FifthPage from './FifthPage';
+import SixthPage from './SixthPage';
+import SeventhPage from './SeventhPage';
+import EighthPage from './EighthPage';
+
+const App = createStackNavigator({
+    FirstPage: { screen: FirstPage }, 
+    SecondPage: { screen: SecondPage }, 
+    ThirdPage: { screen: ThirdPage },
+    FourthPage: { screen: FourthPage },
+    FifthPage: { screen: FifthPage },
+    SixthPage: { screen: SixthPage },
+    SeventhPage: { screen: SeventhPage },
+    EighthPage: { screen: EighthPage },
   },
-});
+  {
+    initialRouteName: 'FirstPage',
+  }
+);
+export default createAppContainer(App);
