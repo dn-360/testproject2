@@ -19,7 +19,6 @@ class Desc extends Component {
         <View>
             <Text style={styles.descText}><Bold>Position: </Bold>{this.props.position}</Text>
             <Text style={styles.descText}><Bold>Major: </Bold>{this.props.major}</Text>
-            <Text style={styles.descText}><Bold>Minor: </Bold>{this.props.minor}</Text>
             <Text style={styles.descText}><Bold>Year: </Bold>{this.props.year}</Text>
         </View>
         )
